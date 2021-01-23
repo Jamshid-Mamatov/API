@@ -19,7 +19,7 @@ while x!=5 or y!=5 :
         gender=data['results'][0]['gender']
         name=data['results'][0]['name']['first']
         city=data['results'][0]['location']['city']
-        
+
         person={}
         if gender=='male' and x!=5:
             x+=1
@@ -30,3 +30,9 @@ while x!=5 or y!=5 :
             y+=1
             person[name]=city
             information['females'].append(person)
+
+
+f=open('main.txt','w')
+f.write(str(information))
+
+
