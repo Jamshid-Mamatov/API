@@ -12,22 +12,22 @@ main_infor={}
 
 for user_data in data:
 
-    main_infor[user_data['id']]=[]
+    main_infor[user_data['name']]={}
 
     name=user_data['name']
     email=user_data['email']
     city=user_data['address']['city']
     company_name=user_data['company']['name']
 
-    main_infor[user_data['id']].append(name)
+    main_infor[user_data['name']]['name']=name
 
-    main_infor[user_data['id']].append(email)
+    main_infor[user_data['name']]['email']=email
 
-    main_infor[user_data['id']].append(city)
+    main_infor[user_data['name']]['city']=city
 
-    main_infor[user_data['id']].append(company_name)
+    main_infor[user_data['name']]['company_name']=company_name
 
-pprint(main_infor)
+
     
 
 
