@@ -27,7 +27,10 @@ for user_data in data:
 
     main_infor[user_data['name']]['company_name']=company_name
 
+f=open("information.json",'w')
 
+
+f.write(json.dumps(main_infor))
     
 
 
